@@ -1,5 +1,5 @@
-shell:
-  program: ubuntu
+# shell:
+#   program: ubuntu
 
 window:
   opacity: 1.0
