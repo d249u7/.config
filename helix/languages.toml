@@ -1,0 +1,11 @@
+[[language]]
+name = "rust"
+
+[language.config]
+checkOnSave = { command = "clippy" }
+inlayHints = { lifetimeElisionHints.enable = true , reborrowHints.enable = true  } 
+
+[[language]]
+name = "markdown"
+language-server = { command = "/Users/erensimsek/.cargo/bin/mdpls" }
+config = { markdown.preview.serveStatic = true }
