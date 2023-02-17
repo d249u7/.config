@@ -18,7 +18,7 @@ render = true
 esc = ["collapse_selection", "keep_primary_selection"]
 
 [theme]
-name = "ayu_dark"
+name = "github_dark"
 
 [theme.overrides]
 "ui.background" = {}
