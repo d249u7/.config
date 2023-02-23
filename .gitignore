@@ -1,2 +1,8 @@
-helix/runtime
-gh
+*
+!alacritty
+!helix
+!nvim
+!zellij
+!.zshrc
+!setup.sh
+!.gitignore
