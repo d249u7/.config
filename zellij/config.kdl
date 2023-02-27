@@ -5,4 +5,4 @@ scrollback_editor "$HOME/.cargo/bin/hx"
 // The name of the default layout to load on startup
 // Default: "default"
 //
-// default_layout "compact"
+default_layout "compact"
