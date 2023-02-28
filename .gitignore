@@ -4,6 +4,9 @@
 !nvim
 !zellij
 !fonts
+!MangoHud
+!goverlay
+!.stignore
 !.zshrc
 !setup.sh
 !.gitignore
