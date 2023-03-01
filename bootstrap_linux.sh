@@ -7,7 +7,7 @@ system() {
     nano /etc/default/grub
     grub-mkconfig -o /boot/grub/grub.cfg
     
-    pacman -S nvidia yay firefox
+    pacman -S nvidia yay firefox manjaro-pipewire
 }
 
 gaming() {
@@ -57,7 +57,7 @@ programming() {
 
     # Powerlevel10k and zsh configs
     rm -rf ~/.config/helix/runtime
-    rm ~/.zshrc 
+    rm ~/.zshrc
     rm ~/.p10k.zsh
     ln -s ~/helix/runtime ~/.config/helix/runtime
     ln ~/.config/.zshrc ~/.zshrc
@@ -68,11 +68,9 @@ programming() {
 
     # Fonts
     mkdir ~/.fonts
-    cp ~/.config/fonts/* ~/.fonts  
+    cp ~/.config/fonts/* ~/.fonts
 }
 
 finally() {
     curl -LO --output-dir ~/.local/share/Steam/steamapps/shadercache/1172470/DXVK_state_cache/ https://github.com/bcook254/apex-legends-cache/raw/main/r5apex.dxvk-cache
 }
-
-programming
