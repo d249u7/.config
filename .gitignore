@@ -12,3 +12,4 @@
 !.gitignore
 !bootstrap_linux.sh
 !.p10k.zsh
+!syncthing.sh
