@@ -50,15 +50,15 @@ programming() {
     cargo install --locked --path helix-term
 
     # Get configs
-    gh repo clone d249u7/.config cfg
-    mv cfg/* .config
-    mv cfg/.* .config
+    gh repo clone d249u7/.config ~/cfg
+    mv ~/cfg/* ~/.config
+    mv ~/cfg/.* .config
     rm -rf cfg
 
     # Powerlevel10k and zsh configs
     rm -rf ~/.config/helix/runtime
-    rm ~/.zshrc
-    rm ~/.p10k.zsh
+    rm -f ~/.zshrc
+    rm -f ~/.p10k.zsh
     ln -s ~/helix/runtime ~/.config/helix/runtime
     ln ~/.config/.zshrc ~/.zshrc
     ln ~/.config/.p10k.zsh ~/.p10k.zsh
