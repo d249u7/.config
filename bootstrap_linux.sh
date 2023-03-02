@@ -49,6 +49,8 @@ programming() {
     cd ~/helix
     cargo install --locked --path helix-term
 
+    yay -S syncthing
+    
     # Get configs
     gh repo clone d249u7/.config ~/cfg
     mv ~/cfg/* ~/.config
@@ -63,14 +65,11 @@ programming() {
     ln ~/.config/.zshrc ~/.zshrc
     ln ~/.config/.p10k.zsh ~/.p10k.zsh
 
-    # Alacritty
+    # Alacritty + zellij
     yay -S alacritty
+    cargo install --locked zellij
 
     # Fonts
     mkdir ~/.fonts
     cp ~/.config/fonts/* ~/.fonts
-}
-
-finally() {
-    curl -LO --output-dir ~/.local/share/Steam/steamapps/shadercache/1172470/DXVK_state_cache/ https://github.com/bcook254/apex-legends-cache/raw/main/r5apex.dxvk-cache
 }
