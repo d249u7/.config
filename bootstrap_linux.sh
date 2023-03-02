@@ -58,8 +58,5 @@ programming() {
     ln ~/.config/.zshrc ~/.zshrc
     ln ~/.config/.p10k.zsh ~/.p10k.zsh
 
-    yay -S alacritty zellij
-
-    mkdir ~/.fonts
-    cp ~/.config/fonts/* ~/.fonts
+    yay -S alacritty zellij ttf-meslo-nerd-font-powerlevel10k
 }
