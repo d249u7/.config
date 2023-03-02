@@ -30,34 +30,27 @@ gaming() {
 }
 
 programming() {
-
-    # zsh + oh my zsh + powerlevel10k
     yay -S zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
     chsh -s $(which zsh)
     
-    # Rust
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-    # GitHub
     pacman -S github-cli
     gh auth login
 
-    # Helix fork
     gh repo clone d249u7/helix ~/helix
     cd ~/helix
     cargo install --locked --path helix-term
 
     yay -S syncthing
     
-    # Get configs
     gh repo clone d249u7/.config ~/cfg
     mv ~/cfg/* ~/.config
     mv ~/cfg/.* .config
     rm -rf cfg
 
-    # Powerlevel10k and zsh configs
     rm -rf ~/.config/helix/runtime
     rm -f ~/.zshrc
     rm -f ~/.p10k.zsh
@@ -65,11 +58,8 @@ programming() {
     ln ~/.config/.zshrc ~/.zshrc
     ln ~/.config/.p10k.zsh ~/.p10k.zsh
 
-    # Alacritty + zellij
-    yay -S alacritty
-    cargo install --locked zellij
+    yay -S alacritty zellij
 
-    # Fonts
     mkdir ~/.fonts
     cp ~/.config/fonts/* ~/.fonts
 }
