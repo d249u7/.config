@@ -24,7 +24,7 @@ name = "github_dark"
 "ui.background" = {}
 "ui.cursor" = { fg = "black", bg = "#E9E0C9" }
 "ui.statusline" = { fg = "white", bg = "#000000" }
-"ui.statusline.normal" = { fg = "white", bg = "gray" }
-"ui.statusline.insert" = { fg = "white", bg = "gray" }
-"ui.statusline.select" = { fg = "white", bg = "gray" }
-"ui.statusline.separator" = { fg = "gray", bg = "#000000" }
+"ui.statusline.normal" = { fg = "black", bg = "white" }
+"ui.statusline.insert" = { fg = "black", bg = "white" }
+"ui.statusline.select" = { fg = "black", bg = "white" }
+"ui.statusline.separator" = { fg = "white", bg = "#000000" }
