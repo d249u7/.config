@@ -44,7 +44,7 @@ programming() {
     cd ~/helix
     cargo install --locked --path helix-term
 
-    yay -S syncthing
+    yay -S daemonize syncthing
     
     gh repo clone d249u7/.config ~/cfg
     mv ~/cfg/* ~/.config

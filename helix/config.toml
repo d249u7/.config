@@ -9,7 +9,7 @@ right = ["diagnostics", "file-type"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
-separator = "" #   
+separator = "" #   
 
 [editor.indent-guides]
 render = true
@@ -22,9 +22,13 @@ name = "github_dark"
 
 [theme.overrides]
 "ui.background" = {}
-"ui.cursor" = { fg = "black", bg = "#E9E0C9" }
-"ui.statusline" = { fg = "white", bg = "#000000" }
-"ui.statusline.normal" = { fg = "black", bg = "white" }
-"ui.statusline.insert" = { fg = "black", bg = "white" }
-"ui.statusline.select" = { fg = "black", bg = "white" }
-"ui.statusline.separator" = { fg = "white", bg = "#000000" }
+"ui.cursor" = { fg = "dark", bg = "light" }
+"ui.statusline" = { fg = "light", bg = "dark" }
+"ui.statusline.normal" = { fg = "dark", bg = "light" }
+"ui.statusline.insert" = { fg = "dark", bg = "light" }
+"ui.statusline.select" = { fg = "dark", bg = "light" }
+"ui.statusline.separator" = { fg = "light", bg = "dark" }
+
+[theme.overrides.palette]
+dark = "#000000"
+light = "#E9E0C9"
