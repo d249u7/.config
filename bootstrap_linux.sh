@@ -36,6 +36,7 @@ programming() {
     chsh -s $(which zsh)
     
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    yay -S rust-analyzer
 
     pacman -S github-cli
     gh auth login

@@ -2,4 +2,4 @@ pane_frames false
 
 scrollback_editor "$HOME/.cargo/bin/hx"
 
-default_layout "layout"
+default_layout "empty"

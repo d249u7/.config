@@ -23,7 +23,7 @@ name = "github_dark"
 [theme.overrides]
 "ui.background" = {}
 "ui.cursor" = { fg = "dark", bg = "light" }
-"ui.statusline" = { fg = "light", bg = "dark" }
+"ui.statusline" = { bg = {} }
 "ui.statusline.normal" = { fg = "dark", bg = "light" }
 "ui.statusline.insert" = { fg = "dark", bg = "light" }
 "ui.statusline.select" = { fg = "dark", bg = "light" }
