@@ -1,12 +1,7 @@
-!.gitignore
-!bootstrap_linux.sh
-!.zshrc
-!setup.sh
 !alacritty
 !nvim
 !zellij
 !languages.toml
 !config.toml
 !.p10k.zsh
-!syncthing.sh
 *
