@@ -8,7 +8,7 @@ left = ["mode", "separator", "spinner", "file-name"]
 right = ["diagnostics", "file-type"]
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
-mode.select = "SELECT"
+mode.select = "VISUAL"
 separator = "" #   
 
 [editor.indent-guides]

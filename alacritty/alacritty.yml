@@ -14,7 +14,6 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-
   
 font:
   size: 14.0
@@ -33,4 +32,4 @@ cursor:
   style:
     blinking: On
 
-  blink_interval: 500
+  blink_interval: 700
