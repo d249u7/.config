@@ -30,7 +30,11 @@ gaming() {
 }
 
 programming() {
-    yay
+    if ! which yay; then
+        exit 1
+    fi
+
+    yay --noconfirm
 
     if ! which zsh; then
         yay -S zsh
@@ -60,11 +64,16 @@ programming() {
         yay -S daemonize syncthing --noconfirm
     fi
 
-    rm -rf ~/cfg
-    gh repo clone d249u7/.config ~/cfg
-    mv -f ~/cfg/* ~/.config
-    mv -f ~/cfg/.* .config
-    rm -rf cfg
+    if [ -d ~/.config.git ]; then
+        git fetch origin master
+        git reset --hard origin/master
+    else
+        rm -rf ~/cfg
+        gh repo clone d249u7/.config ~/cfg
+        mv -f ~/cfg/* ~/.config
+        mv -f ~/cfg/.* .config
+        rm -rf cfg
+    fi
 
     rm -rf ~/.config/helix/runtime
     rm -f ~/.zshrc
@@ -75,3 +84,5 @@ programming() {
 
     yay -S alacritty zellij ttf-meslo-nerd-font-powerlevel10k --noconfirm
 }
+
+programming
