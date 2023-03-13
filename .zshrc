@@ -1,6 +1,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 export VISUAL=hx
 export EDITOR="$VISUAL"
+export CARGO_HOME="$HOME/.cargo"
+export PATH="$CARGO_HOME/bin:$PATH"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
