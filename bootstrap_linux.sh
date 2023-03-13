@@ -64,7 +64,8 @@ programming() {
         yay -S daemonize syncthing --noconfirm
     fi
 
-    if [ -d ~/.config.git ]; then
+    cd ~/.config
+    if git rev-parse --git-dir > /dev/null 2>&1; then
         git fetch origin master
         git reset --hard origin/master
     else
