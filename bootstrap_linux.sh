@@ -30,25 +30,40 @@ gaming() {
 }
 
 programming() {
-    yay -S zsh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-    
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    rustup component add rust-analyzer
-    
-    sudo pacman -S github-cli --noconfirm
-    gh auth login
+    yay
 
-    gh repo clone d249u7/helix ~/helix
-    cd ~/helix
-    cargo install --locked --path helix-term
+    if ! which zsh; then
+        yay -S zsh
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+        git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    fi
 
-    yay -S daemonize syncthing --noconfirm
-    
+    if ! which rustup; then
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        rustup component add rust-analyzer
+    else
+        rustup self update
+    fi
+
+    if ! which gh; then 
+        sudo pacman -S github-cli --noconfirm
+        gh auth login
+    fi
+
+    if ! which hx; then
+        gh repo clone d249u7/helix ~/helix
+        cd ~/helix
+        cargo install --locked --path helix-term
+    fi
+
+    if ! which syncthing; then
+        yay -S daemonize syncthing --noconfirm
+    fi
+
+    rm -rf ~/cfg
     gh repo clone d249u7/.config ~/cfg
-    mv ~/cfg/* ~/.config
-    mv ~/cfg/.* .config
+    mv -f ~/cfg/* ~/.config
+    mv -f ~/cfg/.* .config
     rm -rf cfg
 
     rm -rf ~/.config/helix/runtime
