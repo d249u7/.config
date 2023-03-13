@@ -36,7 +36,7 @@ programming() {
 
     yay --noconfirm
 
-    yay -S zsh
+    yay -S zsh --noconfirm
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/d249u7/ohmyzsh/master/install.sh)"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
