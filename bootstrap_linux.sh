@@ -49,6 +49,8 @@ programming() {
         rustup self update
     fi
 
+    cargo install --locked bat zellij sccache 
+
     if ! which gh; then 
         sudo pacman -S github-cli --noconfirm
         gh auth login
